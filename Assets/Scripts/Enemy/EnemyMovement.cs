@@ -24,15 +24,14 @@ public class EnemyMovement : MonoBehaviour
     void Update ()
     {
         //if current health >0 and player is still FUCKING ALIVE
-        //if (/*enemyHealth.currentHealth > 0 &&*/ playerHealth.currentHealth > 0)
-        //{
+        if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
+        {
             //MOVE TO THE PLAYER YEEE AI
             nav.SetDestination (player.position);
-        //}
-        //else
-        //{   //dont enable navigation
-            //nav.enabled = false;
-        //}
+        }
+        else
+        {   //dont enable navigation
+            nav.enabled = false;
+        }
     }
-    //
 }
